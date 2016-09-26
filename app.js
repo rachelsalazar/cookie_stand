@@ -28,6 +28,7 @@ var firstAndPike = {
   },
   totalCookiesPerDay: function(cookiesEachHourOfOpperation) {
     for (var i = 0; i < this.cookiesEachHourOfOpperation.length; this.totalPerDay += this.cookiesEachHourOfOpperation[i++]) {
+      this.totalPerDay;
       console.log(this.totalPerDay);
     }
   }
@@ -35,3 +36,6 @@ var firstAndPike = {
 
 firstAndPike.cookiesPerHour();
 firstAndPike.totalCookiesPerDay();
+firstAndPike.totalCookiesPerDay();
+
+var 
