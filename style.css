@@ -10,15 +10,15 @@ body {
 }
 
 h1 {
-  font-family: 'Abril Fatface', cursive;
+  font-family: 'Dancing Script', cursive;
   font-weight: 100;
   font-size: 18px;
   color: #ffffff;
   position: absolute;
   display: inline-block;
   width: 260px;
-  padding-top: 20px;
-  margin-left: -200px;
+  padding-top: 25px;
+  margin-left: -180px;
 }
 
 /* #peachBox {
