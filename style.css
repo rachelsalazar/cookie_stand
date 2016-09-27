@@ -1,20 +1,29 @@
-* {
-  background-color: #ffffff;
+body {
+  background: url("images/background.png") no-repeat center center fixed;
+  background-size: cover;
 }
 
 .salmonImage {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  width: 787px;
+  display: inline-block;
+  width: 250px;
+  margin-left: 30px;
 }
 
 h1 {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 100;
+  font-size: 18px;
   color: #ffffff;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: -120px;
-  width: 280px;
+  position: absolute;
+  display: inline-block;
+  width: 260px;
+  padding-top: 20px;
+  margin-left: -200px;
 }
+
+/* #peachBox {
+  background-color: rgba(200, 168, 135, .5);
+  width: 300px;
+  height: 150px;
+  border-radius: 30px;
+} */
