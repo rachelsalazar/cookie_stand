@@ -4,8 +4,6 @@ var cookieTable = document.getElementById('cookietable');
 
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var allStores = [];
-var totalPerDay = 0;
-console.log(totalPerDay);
 
 function Store(minCustPerHour, maxCustPerHour, avgCookiesPerCust, storeLocation) {
   this.minCustPerHour = minCustPerHour;
@@ -13,6 +11,7 @@ function Store(minCustPerHour, maxCustPerHour, avgCookiesPerCust, storeLocation)
   this.avgCookiesPerCust = avgCookiesPerCust;
   this.custEachHour = [];
   this.cookiesEachHourOfOpperation = [];
+  this.totalPerDay = 0;
   this.storeLocation = storeLocation;
   console.log(this.maxCustPerHour);
   this.randomCustPerHour = function() {
@@ -25,7 +24,7 @@ function Store(minCustPerHour, maxCustPerHour, avgCookiesPerCust, storeLocation)
     this.randomCustPerHour();
     for (var i = 0; i < hours.length; i++) {
       this.cookiesEachHourOfOpperation.push(Math.ceil(this.custEachHour[i] * this.avgCookiesPerCust));
-      totalPerDay += this.cookiesEachHourOfOpperation[i];
+      this.totalPerDay += this.cookiesEachHourOfOpperation[i];
       console.log(this.cookiesEachHourOfOpperation);
     }
   };
@@ -43,7 +42,7 @@ function Store(minCustPerHour, maxCustPerHour, avgCookiesPerCust, storeLocation)
     }
     // tRowEl = document.createElement('tr');
     tDataEl = document.createElement('td');
-    tDataEl.textContent = totalPerDay;
+    tDataEl.textContent = this.totalPerDay;
     tRowEl.appendChild(tDataEl);
     cookieTable.appendChild(tRowEl);
   };
