@@ -32,47 +32,48 @@ function Store(minCustPerHour, maxCustPerHour, avgCookiesPerCust, storeLocation)
   this.render = function() {
     this.cookiesPerHour();
     var tRowEl = document.createElement('tr');
-    var tHeaderEl = document.createElement('th');
-    tHeaderEl.textContent = this.storeLocation;
-    tRowEl.appendChild(tHeaderEl);
+    var tDataEl = document.createElement('td');
+    tDataEl.textContent = this.storeLocation;
+    tRowEl.appendChild(tDataEl);
+    cookieTable.appendChild(tRowEl);
     for (var i = 0; i < hours.length; i++) {
-      tHeaderEl = document.createElement('th');
-      tHeaderEl.textContent = this.cookiesEachHourOfOpperation;
-      tRowEl.appendChild(tHeaderEl);
+      tDataEl = document.createElement('td');
+      tDataEl.textContent = this.cookiesEachHourOfOpperation[i];
+      tRowEl.appendChild(tDataEl);
     }
-    tRowEl = document.createElement('tr');
-    tHeaderEl = document.createElement('th');
-    tHeaderEl.textContent = totalPerDay;
-    tRowEl.appendChild(tHeaderEl);
+    // tRowEl = document.createElement('tr');
+    tDataEl = document.createElement('td');
+    tDataEl.textContent = totalPerDay;
+    tRowEl.appendChild(tDataEl);
     cookieTable.appendChild(tRowEl);
   };
   allStores.push(this);
 };
-function table() {
-  function header() {
-    var tRowEl = document.createElement('tr');
-    var tHeaderEl = document.createElement('th');
-    tHeaderEl.textContent = '';
-    tRowEl.appendChild(tHeaderEl);
-    for (var i = 0; i < hours.length; i++) {
-      tHeaderEl = document.createElement('th');
-      tHeaderEl.textContent = hours[i];
-      tRowEl.appendChild(tHeaderEl);
-    }
-    tHeaderEl = document.createElement('th');
-    tHeaderEl.textContent = 'Total';
-    tRowEl.appendChild(tHeaderEl);
-    cookieTable.appendChild(tRowEl);
-  }
-  header();
-  for (var i = 0; i < allStores.length; i++) {
-    allStores[i].render();
-  }
-}
-table();
 
 new Store(23, 65, 6.3, 'First and Pike');
 new Store(3, 24, 1.2, 'SeaTac Airport');
 new Store(11, 38, 3.7, 'Seattle Center');
 new Store(20, 38, 2.3, 'Capitol Hill');
 new Store(2, 16, 4.6, 'Alki');
+
+function table() {
+  var tRowEl = document.createElement('tr');
+  var tHeaderEl = document.createElement('th');
+  tHeaderEl.textContent = '';
+  tRowEl.appendChild(tHeaderEl);
+  for (i = 0; i < hours.length; i++) {
+    tHeaderEl = document.createElement('th');
+    tHeaderEl.textContent = hours[i];
+    tRowEl.appendChild(tHeaderEl);
+  }
+  tHeaderEl = document.createElement('th');
+  tHeaderEl.textContent = 'Total';
+  tRowEl.appendChild(tHeaderEl);
+  cookieTable.appendChild(tRowEl);
+
+  for (var i = 0; i < allStores.length; i++) {
+    console.log(i);
+    allStores[i].render();
+  }
+}
+table();
