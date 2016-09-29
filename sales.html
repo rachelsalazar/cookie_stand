@@ -5,8 +5,26 @@
     <link rel="stylesheet" href="sales.css"></link>
   </head>
     <body>
-        <table id="cookietable"></table>
+      <form id="cookieinputform">
+        <fieldset>
+        <legend>Add/Change Data</legend>
 
+          <label for="inputlocation">Location:</label>
+          <input name="inputlocation" type="text" size="17" />
+
+          <label for="mincust">Minimum Customers:</label>
+          <input name="mincust" type="text" size="4" />
+
+          <label for="maxcust">Maximum Customers:</label>
+          <input name="maxcust" type="text" size="4" />
+
+          <label for="cookies">Cookies Per Customer:</label>
+          <input name="cookies" type="text" size="4" />
+
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+      <table id="cookietable"></table>
       <script src="app.js"></script>
     </body>
   </html>
