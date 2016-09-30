@@ -31,8 +31,14 @@ Store.prototype.cookiesPerHour = function() {
     // console.log(this.cookiesEachHourOfOpperation);
   }
 };
-Store.prototype.render = function() {
+Store.prototype.totalCookiesPerHour = function () {
   this.cookiesPerHour();
+  for (var i = 0; i < hours.length + 1; i++) {
+
+  }
+};
+Store.prototype.render = function() {
+  this.totalCookiesPerHour();
   var tRowEl = document.createElement('tr');
   var tDataEl = document.createElement('td');
   tDataEl.textContent = this.storeLocation;
