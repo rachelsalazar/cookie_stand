@@ -3,7 +3,7 @@ body {
   margin-right: auto;
   margin-top: 200px;
   display: block;
-  max-width: 900px;
+  max-width: 895px;
   border: 2px solid #fff;
   background-color: #f9e4de;
 }
@@ -11,6 +11,7 @@ body {
 fieldset {
   border: 2px solid #fff;
   border-radius: 10px;
+  max-width: 895px;
 }
 
 td {
@@ -22,4 +23,9 @@ td {
 th {
   border: 2px solid #fff;
   background-color: #e2a1a1;
+}
+
+.heading {
+  text-align: center;
+  color: #555555;
 }
