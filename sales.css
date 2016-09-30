@@ -3,9 +3,9 @@ body {
   margin-right: auto;
   margin-top: 200px;
   display: block;
-  width: 835px;
+  max-width: 900px;
   border: 2px solid #fff;
-  background-color: #f9e4de
+  background-color: #f9e4de;
 }
 
 fieldset {
