@@ -1,12 +1,16 @@
-body {
-  background: url("images/background.png") no-repeat center center fixed;
-  background-size: cover;
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 .salmonImage {
   display: inline-block;
-  width: 250px;
+  max-width: 200px;
   margin-left: 30px;
+}
+
+header {
+  background-color: #f9e4de;
 }
 
 h1 {
@@ -16,14 +20,119 @@ h1 {
   color: #ffffff;
   position: absolute;
   display: inline-block;
-  width: 260px;
-  padding-top: 25px;
-  margin-left: -180px;
+  padding-top: 15px;
+  margin-left: -150px;
 }
 
-/* #peachBox {
-  background-color: rgba(200, 168, 135, .5);
-  width: 300px;
-  height: 150px;
-  border-radius: 30px;
-} */
+.motto {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 100;
+  font-size: 25px;
+  color: black;
+  margin-left: 45%;
+}
+
+.photos {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#home-img {
+  margin-top: 100px;
+  margin-left: -10%;
+}
+
+.home {
+  font-family: 'Shadows Into Light Two', cursive;
+  letter-spacing: 8px;
+  font-weight: 100;
+  text-decoration: none;
+  font-size: 60px;
+  position: relative;
+  margin-left: 32%;
+  top: -130px;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+}
+
+#about-img {
+  max-width: 400px;
+}
+
+.about-us {
+  font-family: 'Shadows Into Light Two', cursive;
+  letter-spacing: 8px;
+  font-weight: 100;
+  text-decoration: none;
+  font-size: 60px;
+  position: relative;
+  margin-left: 15%;
+  top: -150px;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+}
+
+#store-img {
+  margin-left: 10%;
+}
+
+.store {
+  font-family: 'Shadows Into Light Two', cursive;
+  letter-spacing: 8px;
+  font-weight: 100;
+  text-decoration: none;
+  font-size: 60px;
+  position: relative;
+  margin-left: 30%;
+  top: -150px;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+}
+
+#contact-img {
+  margin-left: 12%;
+}
+
+.contact {
+  font-family: 'Shadows Into Light Two', cursive;
+  letter-spacing: 8px;
+  font-weight: 100;
+  text-decoration: none;
+  font-size: 60px;
+  position: relative;
+  margin-left: 22%;
+  top: -160px;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+}
+
+.about-section {
+  height: 650px;
+}
+
+.about-heading {
+  font-size: 30px;
+  margin-left: 130px;
+}
+
+.cookie-img {
+  float: right;
+  margin-top: 30px;
+  margin-right: 250px;
+}
+
+p {
+  margin-left: 100px;
+  font-size: 20px;
+  max-width: 600px;
+}
+
+.store-section {
+  height: 650px;
+}
+
+.store-heading {
+  font-size: 30px;
+  margin-left: 130px;
+}
